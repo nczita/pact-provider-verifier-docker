@@ -6,7 +6,7 @@ process in any language, by running the Pact Rake tasks in a separate Docker con
 Docker image is here: https://cloud.docker.com/repository/docker/nczita/pact-provider-verifier.
 
 ```
-docker push nczita/pact-provider-verifier
+docker pull nczita/pact-provider-verifier
 ```
 
 **Features**:
