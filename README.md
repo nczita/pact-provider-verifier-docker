@@ -58,6 +58,10 @@ pactverifier:
   #- pact_urls=pacts/foo-consumer.json
   # If you have local Pacts (full path)
   #- pact_urls=/app/pacts/foo-consumer.json
+  # you want to sent to Pact Broker verification result
+  #- app_version=$GIT_COMMIT
+  # or
+  #- app_version="1.2.3"
 ```
 
 ### API with Provider States

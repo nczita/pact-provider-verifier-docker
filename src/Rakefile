@@ -30,6 +30,10 @@ task :verify_pacts do
       ENV['pact_consumer'] = get_pact_consumer_name(pact_url)
       task.pact_url pact_url, pact_helper: './pact_helper'
       task.provider_base_url ENV['provider_base_url']
+      if ENV['app_version']
+        task.provider_app_version ENV['app_version']
+        task.publish_verification_results true
+      end
     end
     task_name = "pact:verify:#{pact_url}"
     Rake::Task[task_name].invoke
